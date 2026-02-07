@@ -1,0 +1,91 @@
+body
+{
+    background-color:darkgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: hidden;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+#Welcome
+{
+    padding: auto;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    position: relative
+}
+#login
+{
+    text-align: center;
+    font-size: large;
+    position: absolute;
+    left: 49.5%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 300px; 
+    max-height: 250px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); 
+    border: 1px solid rgba(0, 0, 0, 0.288);
+}
+#stickerA
+{
+    position:absolute;
+    right: 0;
+    bottom: 40%;
+    width: 30%;
+}
+#stickerB
+{
+    position:absolute;
+    left: 0;
+    top: 40%;
+    width: 30%;
+}
+#stickerC
+{
+    position:absolute;
+    transform: translate(-50%, -50%);
+    left: 15%;
+    top: 30%;
+    left: 50%;
+    width: 17%;
+    
+}
+#politica
+{
+    text-align: center;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top : 90%;
+    left: 50%;
+    
+}
+button 
+{
+    margin: 0 0 10px;
+    background-color: #40aa8c;
+    outline: none;
+    column-gap: 100px;
+    border-radius: 15px;
+    border-color: #276654;
+    padding: 10px;
+    width: 100%;
+    color: black;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+button:hover 
+{
+    background-color: aqua;
+    transform: scale(1.02);
+}
