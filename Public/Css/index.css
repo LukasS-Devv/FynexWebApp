@@ -1,6 +1,6 @@
 body
 {
-    background-color:darkgray;
+    background-color: #F8F9FA;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-y: hidden;
 }
@@ -12,7 +12,7 @@ body
 {
     padding: auto;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: #2C3E50;
     font-size: x-large;
     position: relative
 }
@@ -71,11 +71,11 @@ body
 button 
 {
     margin: 0 0 10px;
-    background-color: #40aa8c;
+    background-color: #7D864F;
     outline: none;
     column-gap: 100px;
     border-radius: 15px;
-    border-color: #276654;
+    border: none;
     padding: 10px;
     width: 100%;
     color: black;
@@ -86,6 +86,6 @@ button
 }
 button:hover 
 {
-    background-color: aqua;
+    background-color: #4A5131;
     transform: scale(1.02);
 }
