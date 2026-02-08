@@ -1,6 +1,6 @@
 body
 {
-    background-color: #F8F9FA;
+    background-color: #D7CCC8;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
@@ -109,3 +109,44 @@ select
     border: none;
     box-sizing: border-box;
 }
+#nome
+{
+    transition: 0.4s;
+}
+#nome:hover
+{
+    transition: 0.2s;
+    cursor: pointer ;
+    transform: scale(1.02);
+}
+#sobrenome
+{
+    transition: 0.4s;
+}
+#sobrenome:hover
+{
+    transition: 0.2s;
+    cursor: pointer ;
+    transform: scale(1.02);
+}
+#montante
+{
+    transition: 0.4s;
+}
+#montante:hover
+{
+    transition: 0.2s;
+    cursor: pointer ;
+    transform: scale(1.02);
+}
+#moeda
+{
+    transition: 0.4s;
+}
+#moeda:hover
+{
+    transition: 0.2s;
+    cursor: pointer ;
+    transform: scale(1.02);
+}
+

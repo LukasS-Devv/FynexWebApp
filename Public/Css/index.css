@@ -1,6 +1,6 @@
 body
 {
-    background-color: #F8F9FA;
+    background-color: #D7CCC8;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-y: hidden;
 }
@@ -70,6 +70,7 @@ body
 }
 button 
 {
+    transition: 0.4s;
     margin: 0 0 10px;
     background-color: #7D864F;
     outline: none;
@@ -81,11 +82,20 @@ button
     color: black;
     font-family: 'Segoe UI';
     font-weight: bold;
-    transition: 0.3s;
     cursor: pointer;
 }
 button:hover 
 {
+    transition: 0.2s;
     background-color: #4A5131;
+    transform: scale(1.02);
+}
+#nacc
+{
+    transition: 0.4s;
+}
+#nacc:hover
+{
+    transition: 0.2s;
     transform: scale(1.02);
 }
