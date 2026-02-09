@@ -1,17 +1,42 @@
+/*window.onload = function ()
+{
+    if (localStorage.getItem('loged') === 'true')
+    {
+        window.location.replace("../Html/BemVindo.html");
+    }
+} */
+
 function Entrar ()
 {
     const nome = document.getElementById("nome");
     const sobrenome = document.getElementById("sobrenome");
     const montante = document.getElementById("montante");
     const moeda = document.getElementById("moeda");
+    const campos = [nome,sobrenome,montante,moeda];
+    var full = true;
 
-    if (nome.value.trim() === "" || sobrenome.value.trim() === "" || montante.value.trim() === "" || moeda.value === "N")
+    campos.forEach(campo =>
     {
-        alert("Preencha todos os campos");
-        return;
+        if(campo.value.trim() === "" || campo.value === "N")
+        {
+            campo.classList.add('input-erro');
+            full = false;
+        }
+        else
+        {
+            campo.classList.remove('input-erro');
+        }
+    });
+
+    if (full === true)
+    {
+        /*localStorage.setItem('loged', 'true'); */
+        window.location.replace("../Html/BemVindo.html");
     }
-    
-    window.open("../Html/BemVindo.html","_self");
 };
 
-
+// lembrar de remover dps
+function skip ()
+{
+    window.location.replace("../Html/BemVindo.html");
+}
