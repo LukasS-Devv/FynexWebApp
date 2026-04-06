@@ -1,11 +1,3 @@
-/*window.onload = function ()
-{
-    if (localStorage.getItem('loged') === 'true')
-    {
-        window.location.replace("../Html/BemVindo.html");
-    }
-} */
-
 function Entrar ()
 {
     const nome = document.getElementById("nome");
@@ -30,13 +22,7 @@ function Entrar ()
 
     if (full === true)
     {
-        /*localStorage.setItem('loged', 'true'); */
+        localStorage.setItem('loged', 'true'); 
         window.location.replace("../Html/BemVindo.html");
     }
 };
-
-// lembrar de remover dps
-function skip ()
-{
-    window.location.replace("../Html/BemVindo.html");
-}

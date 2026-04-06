@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Fynex Cadastro</title>
     <link rel="stylesheet" href="../Css/cadastro.css">
     <link rel="shortcut icon" href="../Images/logo_fynex_no_bg _.ico" type="image/x-icon">
 </head>
@@ -15,7 +15,7 @@
     
     <!-- Mensagem Cadastro-->
     <div id="cadastro">
-        <h1><strong>Tell us more about you!</strong></h1>
+        <h1><strong>Conte-nos mais sobre você!</strong></h1>
     </div>
 
     <!-- Up Shape-->
@@ -27,26 +27,22 @@
 
    <!-- cadastro inputs--> 
     <div id="inputsA">
-        <input id="nome" type="text" placeholder="Name">
-        <input id="sobrenome" type="text" placeholder="Surname" >
-        <input id="montante" type="number" placeholder="Set your initial balance">
-        <br> <select name="moeda" id="moeda"> 
-            <option value="N" disabled hidden selected>Currency</option>~
-            <option value="$">$ - US Dollar</option>
+        <input id="nome" class="input"  type="text" placeholder="Nome">
+        <input id="sobrenome" class="input"  type="text" placeholder="Sobrenome" >
+        <input id="montante" class="input"  type="number" placeholder="Defina seu saldo inicial">
+        <br> <select name="moeda" id="moeda" class="input" > 
+            <option value="N" disabled hidden selected>Moeda</option>~
+            <option value="$">$ - Dólar Americano</option>
             <option value="€">€ - Euro</option>
-            <option value="€">&yen - Japonese Yen (円)</option>
+            <option value="€">&yen - Yen Japonês (円)</option>
         </select> 
         <br> 
-        <button onclick="Entrar()" >Finish</button>
+        <button onclick="Entrar()" >Terminar</button>
     </div>
     <!--Link Politica-->
     <div id="politica">
         <h3>Ao prosseguir, você concorda com os nossos <u><a href="Politica.html" >Termos de serviço e Política de Privacidade</a></u></h3>
     </div>
-
-
-    <!-- remover dps -->
-    <button style="width: 100px;" onclick="skip()">pular </button>
 
     <script src="../JavaScript/Cadastro.js"></script>
 </body>

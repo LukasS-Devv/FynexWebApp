@@ -115,47 +115,16 @@ select
     border: none;
     box-sizing: border-box;
 }
-#nome
+.input
 {
     transition: 0.4s;
 }
-#nome:hover
+.input:hover
 {
     transition: 0.2s;
     cursor: pointer ;
     transform: scale(1.02);
 }
-#sobrenome
-{
-    transition: 0.4s;
-}
-#sobrenome:hover
-{
-    transition: 0.2s;
-    cursor: pointer ;
-    transform: scale(1.02);
-}
-#montante
-{
-    transition: 0.4s;
-}
-#montante:hover
-{
-    transition: 0.2s;
-    cursor: pointer ;
-    transform: scale(1.02);
-}
-#moeda
-{
-    transition: 0.4s;
-}
-#moeda:hover
-{
-    transition: 0.2s;
-    cursor: pointer ;
-    transform: scale(1.02);
-}
-
 @keyframes move 
 {
     0% { transform: translateY(0px) rotate(0deg); }
@@ -187,8 +156,6 @@ select
 .p2 { top: 40%; animation: ventoLateral 12s linear infinite; animation-delay: 2s; }
 .p3 { top: 70%; animation: ventoLateral 10s linear infinite; animation-delay: 5s; }
 .p4 { top: 85%; animation: ventoLateral 15s linear infinite; animation-delay: 1s; }
-
-
 .input-erro {
     border: 2px solid #ff4d4d !important;
     animation: shake 0.4s ease-in-out;
