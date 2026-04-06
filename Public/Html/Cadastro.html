@@ -3,47 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Fynex Cadastro</title>
-    <link rel="stylesheet" href="../Css/cadastro.css">
     <link rel="shortcut icon" href="../Images/logo_fynex_no_bg _.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Css/cadastro.css">
 </head>
+
+
 <body>
+    <!-- Particulas-->
     <div class="particula p1"></div>
     <div class="particula p2"></div>
     <div class="particula p3"></div>
     <div class="particula p4"></div>
     
+  
     <!-- Mensagem Cadastro-->
     <div id="cadastro">
         <h1><strong>Conte-nos mais sobre você!</strong></h1>
     </div>
 
-    <!-- Up Shape-->
-        <img id="stickerA" src="../Images/Shape Set_a.svg" alt="UPsticker">
+
     <!-- Down Shape-->
-        <img id="stickerB" src="../Images/Shape Set_b.svg" alt="DOWNsticker">
+        <img id="stickerA" src="../Images/Shape Set_a.svg" alt="DownSticker">
+    <!-- Up Shape-->
+        <img id="stickerB" src="../Images/Shape Set_b.svg" alt="UpSticker">
     <!-- Fynex--> 
-        <img id="stickerC" src="../Images/logo_fynex_no_bg _.png" alt="DOWNsticker">
+        <img id="stickerC" src="../Images/logo_fynex_no_bg _.png" alt="FynexLogoSticker">
+
 
    <!-- cadastro inputs--> 
-    <div id="inputsA">
-        <input id="nome" class="input"  type="text" placeholder="Nome">
-        <input id="sobrenome" class="input"  type="text" placeholder="Sobrenome" >
-        <input id="montante" class="input"  type="number" placeholder="Defina seu saldo inicial">
-        <br> <select name="moeda" id="moeda" class="input" > 
-            <option value="N" disabled hidden selected>Moeda</option>~
-            <option value="$">$ - Dólar Americano</option>
-            <option value="€">€ - Euro</option>
-            <option value="€">&yen - Yen Japonês (円)</option>
-        </select> 
-        <br> 
-        <button onclick="Entrar()" >Terminar</button>
+    <div id="Inputs">
+
+        <!-- Campos-->
+        <input  id="nome"        class="input"  type="text"      placeholder="Nome">
+        <input  id="sobrenome"   class="input"  type="text"      placeholder="Sobrenome" >
+        <input  id="montante"    class="input"  type="number"    placeholder="Defina seu saldo inicial">
+
+        <!-- Menu Moedas-->
+        <select id="moeda"       class="input"> 
+
+            <!-- Predefinição/Black Field-->
+            <option value="N" disabled hidden selected>Moeda</option>
+
+            <!-- Opições Reais-->
+            <option value="$">  $     -   Dólar Americano     </option>
+            <option value="€">  €     -   Euro                </option>
+            <option value="€">  &yen  -   Yen Japonês (円)    </option>
+
+        </select>
+
+        <!-- Finish Form Button-->
+        <br><button onclick="Entrar()" >Terminar</button>
     </div>
+
+
     <!--Link Politica-->
     <div id="politica">
         <h3>Ao prosseguir, você concorda com os nossos <u><a href="Politica.html" >Termos de serviço e Política de Privacidade</a></u></h3>
     </div>
 
+
+    <!-- Codigo JS-->
     <script src="../JavaScript/Cadastro.js"></script>
 </body>
 </html>

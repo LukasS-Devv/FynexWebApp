@@ -21,6 +21,7 @@ body
     z-index: -1; 
     pointer-events: none; 
 }
+
 @keyframes ventoLateral {
     0% {
         transform: translate(-10vw, 0) rotate(0deg);
@@ -38,7 +39,7 @@ body
 .p3 { top: 70%; animation: ventoLateral 10s linear infinite; animation-delay: 5s; }
 .p4 { top: 85%; animation: ventoLateral 15s linear infinite; animation-delay: 1s; }
 
-.hello
+.MainMenu
 {
     background-color: white;
     border: 2px solid #2D3A27;
@@ -59,19 +60,19 @@ body
     gap: 2px !important;
 }
 
-.helloMsg2
+#Greetings
 {
     align-self: flex-start;
     margin-left: 10px;
 }
 
-.helloTexto
+#GreetingsSecund
 {
     display: flex;
     flex-direction: column;
 }
 
-.perfil
+#perfil
 {
     transition: 0.2s;
     width: 60px;
@@ -81,7 +82,7 @@ body
     border-radius: 50%;
 }
 
-.perfil:hover
+#perfil:hover
 {
     transition: 0.2s;
     cursor: pointer;
