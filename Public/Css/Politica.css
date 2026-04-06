@@ -1,97 +1,133 @@
-.Termos {
-
-    background-color: white;
-    border: 2px solid #2D3A27;
-    border-radius: 15px;
-    padding: 30px 40px;
-    width: 60%;
-    max-height: 80vh;
-    overflow-y: auto;
-
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
+/*Geral*/
 body
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #D7CCC8;
     overflow-x: hidden;
 }
+/********************/
 
-.Termos::-webkit-scrollbar {
+
+/*Termos Configuração*/
+.Termos 
+{
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px 40px;
+    width: 60%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+}
+
+.Termos::-webkit-scrollbar 
+{
     display: none;
 }
 
-.Termos h1 {
+.Termos h1 
+{
     font-size: 2rem;
     margin-bottom: 20px;
     color: #2D3A27;
     text-align: center;
 }
 
-.Termos h2 {
+.Termos h2 
+{
     font-size: 1.2rem;
     margin-top: 20px;
     margin-bottom: 8px;
     color: #2D3A27;
 }
 
-.Termos p {
+.Termos p 
+{
     font-size: 0.95rem;
     color: #333;
     line-height: 1.5;
     margin-bottom: 10px;
 }
 
-.Termos ul {
+.Termos ul 
+{
     margin-left: 20px;
     margin-bottom: 10px;
 }
 
-.Termos li {
+.Termos li 
+{
     margin-bottom: 5px;
     font-size: 0.95rem;
 }
 
-.Termos hr {
-    margin: 20px 0;
-    border: none;
-    border-top: 1px solid #ccc;
-}
-
-.Termos em {
+.Termos em 
+{
     font-size: 0.85rem;
-    color: #666;
+    color: #667;
 }
+/************************/
 
-.particula {
+
+/*Particulas de Fundo*/
+.particula 
+{
     position:fixed;
-    width: 12px;
-    height: 3px;
+    left: -10%;
+    width: 14px;
+    height: 4px;
     background-color: #2D3A27; 
-    border-radius: 50% 20%;
+    border-radius: 60% 20%;
     z-index: -1; 
     pointer-events: none; 
 }
 
-@keyframes ventoLateral {
-    0% {
+@keyframes ventoLateral 
+{
+
+    0% 
+    {
         transform: translate(-10vw, 0) rotate(0deg);
         opacity: 0;
     }
-    20% { opacity: 0.4; }
-    80% { opacity: 0.4; }
-    100% {
+
+    20%     { opacity: 0.4; }
+    80%     { opacity: 0.4; }
+
+    100%    
+    {
         transform: translate(110vw, 15vh) rotate(720deg);
         opacity: 0;
     }
 }
-.p1 { top: 10%; animation: ventoLateral 8s linear infinite; }
-.p2 { top: 40%; animation: ventoLateral 12s linear infinite; animation-delay: 2s; }
-.p3 { top: 70%; animation: ventoLateral 10s linear infinite; animation-delay: 5s; }
-.p4 { top: 85%; animation: ventoLateral 15s linear infinite; animation-delay: 1s; }
+
+.p1 { top: 10%; animation: ventoLateral 6s linear infinite; }
+.p2 { top: 40%; animation: ventoLateral 7s linear infinite; animation-delay: 2s; }
+.p3 { top: 70%; animation: ventoLateral 8s linear infinite; animation-delay: 3s; }
+.p4 { top: 85%; animation: ventoLateral 10s linear infinite; animation-delay: 1s; }
+/***********************************************************************************************/
+
+
+/*Botão de Dowload do PDF*/
+.BtnDownload {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 28px;
+    background-color: #7D864F;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.BtnDownload:hover {
+    background-color: #2D3A27;
+    transform: translateY(-2px);
+}
+/***********************************/

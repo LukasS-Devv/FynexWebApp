@@ -12,32 +12,41 @@ body
     overflow-x: hidden;
 }
 
-.particula {
+.particula 
+{
     position:fixed;
-    width: 12px;
-    height: 3px;
+    left: -10%;
+    width: 14px;
+    height: 4px;
     background-color: #2D3A27; 
-    border-radius: 50% 20%;
+    border-radius: 60% 20%;
     z-index: -1; 
     pointer-events: none; 
 }
 
-@keyframes ventoLateral {
-    0% {
+@keyframes ventoLateral 
+{
+
+    0% 
+    {
         transform: translate(-10vw, 0) rotate(0deg);
         opacity: 0;
     }
-    20% { opacity: 0.4; }
-    80% { opacity: 0.4; }
-    100% {
+
+    20%     { opacity: 0.4; }
+    80%     { opacity: 0.4; }
+
+    100%    
+    {
         transform: translate(110vw, 15vh) rotate(720deg);
         opacity: 0;
     }
 }
-.p1 { top: 10%; animation: ventoLateral 8s linear infinite; }
-.p2 { top: 40%; animation: ventoLateral 12s linear infinite; animation-delay: 2s; }
-.p3 { top: 70%; animation: ventoLateral 10s linear infinite; animation-delay: 5s; }
-.p4 { top: 85%; animation: ventoLateral 15s linear infinite; animation-delay: 1s; }
+
+.p1 { top: 10%; animation: ventoLateral 6s linear infinite; }
+.p2 { top: 40%; animation: ventoLateral 7s linear infinite; animation-delay: 2s; }
+.p3 { top: 70%; animation: ventoLateral 8s linear infinite; animation-delay: 3s; }
+.p4 { top: 85%; animation: ventoLateral 10s linear infinite; animation-delay: 1s; }
 
 .MainMenu
 {
