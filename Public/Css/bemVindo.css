@@ -1,53 +1,47 @@
+/*Congiguração Universal*/
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+*::-webkit-scrollbar
+{
+    display: none;
+}
+/***********************************************/
 
+
+/*Definições do body*/
 body
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #D7CCC8;
     overflow-x: hidden;
+
 }
+/***************************************************/
 
-.particula 
-{
-    position:fixed;
-    left: -10%;
-    width: 14px;
-    height: 4px;
-    background-color: #2D3A27; 
-    border-radius: 60% 20%;
-    z-index: -1; 
-    pointer-events: none; 
+
+/*Detalhes da pagina*/
+.detalhes
+{ 
+    display: flex;
+    position: absolute;
+    padding: 20px 40px;
+    height: 15%;
+    width: 90%; 
+    z-index: 0;
+    bottom: -20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    gap: 2px !important;
 }
+/***************************************************************/
 
-@keyframes ventoLateral 
-{
 
-    0% 
-    {
-        transform: translate(-10vw, 0) rotate(0deg);
-        opacity: 0;
-    }
-
-    20%     { opacity: 0.4; }
-    80%     { opacity: 0.4; }
-
-    100%    
-    {
-        transform: translate(110vw, 15vh) rotate(720deg);
-        opacity: 0;
-    }
-}
-
-.p1 { top: 10%; animation: ventoLateral 6s linear infinite; }
-.p2 { top: 40%; animation: ventoLateral 7s linear infinite; animation-delay: 2s; }
-.p3 { top: 70%; animation: ventoLateral 8s linear infinite; animation-delay: 3s; }
-.p4 { top: 85%; animation: ventoLateral 10s linear infinite; animation-delay: 1s; }
-
+/*Menu suspenso (principal)*/
 .MainMenu
 {
     background-color: white;
@@ -69,18 +63,22 @@ body
     gap: 2px !important;
 }
 
-#Greetings
+/*Menu Hamburguer*/
+.menuburguer
 {
-    align-self: flex-start;
-    margin-left: 10px;
+    transition: 0.4s;
+   display: inline-block;
+   transform: scale(2);
+}
+.menuburguer:hover
+{
+    transition: 0.4s;
+    cursor: pointer;
+   display: inline-block;
+   transform: scale(2.5);
 }
 
-#GreetingsSecund
-{
-    display: flex;
-    flex-direction: column;
-}
-
+/*Imagens de perfil*/
 #perfil
 {
     transition: 0.2s;
@@ -99,6 +97,71 @@ body
     opacity: 0.8;
 }
 
+/* Mensagem Up */
+#GreetingsSecund {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+}
+
+/* Mensagem Down */
+#Greetings {
+    align-self: center; 
+    margin-left: 0;
+    text-align: center; 
+}
+
+/*Menu DropDown*/
+.SideMenu {
+    background-color: white;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.50);
+    border: 2px solid #2D3A27;
+    border-color: #2D3A27;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    padding: 20px 40px;
+    height: 40%;
+    width: 90%;
+    z-index: 2;
+    top: 10%;
+    left: 5%;
+    transform: translate(-50%,-50);
+    gap: 2px !important;
+    transition: left 0.3s ease;
+}
+
+/* ── Botões do Side Menu ── */
+.SideMenu a, .SideMenu .MenuBtn, .SideMenu .SairBtn{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: #2D3A27;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.SideMenu a:hover, .SideMenu .MenuBtn:hover, .SideMenu .SairBtn:hover {
+    background-color: #C8D3BA;
+    transform: translateX(4px);
+}
+/******************************************************/
+
+
+/*Painel principal*/
 .painel
 {
     background-color: white;
@@ -118,7 +181,10 @@ body
     border-radius: 15px;
     gap: 2px !important;
 }
+/**************************************************************/
 
+
+/*Atividades recentes*/
 .recentes
 {
     background-color: white;
@@ -139,78 +205,10 @@ body
     gap: 2px !important;
     
 }
+/*******************************************************/
 
-.recentes::-webkit-scrollbar{
-    display: none;
-}
 
-.menuburguer
-{
-    transition: 0.4s;
-   display: inline-block;
-   transform: scale(2);
-}
-.menuburguer:hover
-{
-    transition: 0.4s;
-    cursor: pointer;
-   display: inline-block;
-   transform: scale(2.5);
-}
-
-.detalhes
-{
-    
-    display: flex;
-    position: absolute;
-    padding: 20px 40px;
-    height: 15%;
-    width: 90%; 
-    z-index: 0;
-    bottom: -20%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 15px;
-    gap: 2px !important;
-}
-
-.progress
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.robar {
-    position: relative;
-    height: 120px; /* Tamanho do círculo */
-    width: 120px;
-    border-radius: 50%;
-    background: conic-gradient(#2D3A27 40% 0deg, #ededed 0deg); /*progresso. configurar artravez de js (para mudar cor e percentagem)*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.4s;
-}
-
-.robar::before {
-    content: "";
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: white;
-}
-
-.progressValue {
-    position: relative;
-    font-size: 25px;
-    font-weight: 700;
-    color: #2D3A27;
-}
- 
+/*Botão Flutoante*/
 .ActionBtn {
 
     position: fixed;
@@ -239,32 +237,7 @@ body
     border-color: #4A5131;
 }
 
-.SideMenu {
-    background-color: white;
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.50);
-    border: 2px solid #2D3A27;
-    border-color: #2D3A27;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    padding: 20px 40px;
-    height: 40%;
-    width: 90%;
-    z-index: 2;
-    top: 10%;
-    left: 5%;
-    transform: translate(-50%,-50);
-    gap: 2px !important;
-    transition: left 0.3s ease;
-}
-
-.SideMenu::-webkit-scrollbar{
-    display: none;
-}
-
+/*Menu flutuante*/
 .FloatMenu {
     background-color: white;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.50);
@@ -286,33 +259,7 @@ body
     transition: left 0.3s ease;
 }
 
-
-/* ── Botões do Side Menu ── */
-.SideMenu a, .SideMenu .MenuBtn, .SideMenu .SairBtn{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 12px;
-    background: transparent;
-    color: #2D3A27;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.SideMenu a:hover, .SideMenu .MenuBtn:hover, .SideMenu .SairBtn:hover {
-    background-color: #C8D3BA;
-    transform: translateX(4px);
-}
-
-
-
-/* ── Botões do menu "+" ── */
+/*Botões do menu Flutuante*/
 .PlusBtn {
     display: block;
     width: 100%;
@@ -342,3 +289,45 @@ body
     background: #fdecea !important;
     color: #c0392b !important;
 }
+/************************************************/
+
+
+/*Particulas*/
+.particula 
+{
+    position:fixed;
+    left: -10%;
+    width: 14px;
+    height: 4px;
+    background-color: #2D3A27; 
+    border-radius: 60% 20%;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+/*Animação particulas*/
+@keyframes ventoLateral 
+{
+
+    0% 
+    {
+        transform: translate(-10vw, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20%     { opacity: 0.4; }
+    80%     { opacity: 0.4; }
+
+    100%    
+    {
+        transform: translate(110vw, 15vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/*Configuaração particulas*/
+.p1 { top: 10%; animation: ventoLateral 3s linear infinite; }
+.p2 { top: 40%; animation: ventoLateral 4s linear infinite; animation-delay: 2s; }
+.p3 { top: 70%; animation: ventoLateral 4s linear infinite; animation-delay: 3s; }
+.p4 { top: 85%; animation: ventoLateral 10s linear infinite; animation-delay: 1s; }
+/******************************************************************************************/
