@@ -14,6 +14,9 @@
     <!-- Div para definir detalhes da pagina-->
     <div class="detalhes"></div>
 
+    <!-- Div Para fechar os menus-->
+    <div id="CloseMenusDiv" onclick="CloseAll()"></div>
+
     <!-- Particulas-->
     <div class="particula p1"></div>
     <div class="particula p2"></div>
@@ -22,16 +25,16 @@
 
 
     <!-- Main Menu/Cabeçalho-->
-    <div class="MainMenu">
+    <div id="MainMenu" class="MainMenu">
         <!-- Menu Hamburguer-->
-        <div class="menuburguer">&#9776;</div>
+        <div class="menuburguer" onclick="OpenDropMenu()">&#9776;</div>
 
         <!-- Saudações-->
         <div class="MainMenuTexto">
 
             <h1 id="Greetings">          Olá, Utilizador </h1>
             <h3 id="GreetingsSecund">    Como está ?     </h3>
-         
+
         </div>
 
         <!-- Profile Pic-->
@@ -58,16 +61,14 @@
 
 
     <!-- Botão de Ações Rapidas-->
-    <div class="ActionBtn">
+    <div class="ActionBtn" onclick="OpenFloatMenu()">
         <!-- To Close (-) To Open (+)-->
         <h1 id="OpenClose"></h1>
-
-
     </div>
 
 
     <!-- Menu DropDown (Definições)-->
-    <div class="SideMenu">
+    <div id="SideMenuId" class="SideMenu hidden">
         <!-- Espaçamento entre o topo da div (escondido) e as opções-->
         <br><br> 
 
@@ -80,7 +81,7 @@
 
 
     <!-- Float Menu (Botão Verde)-->
-    <div class="FloatMenu"> 
+    <div id="FloatMenuId" class="FloatMenu hidden"> 
         <!-- Ações-->
         <button id="Saldo" class="PlusBtn">     Adicionar Saldo         </button>
         <button id="Gasto" class="PlusBtn">     Registar Gasto          </button>
@@ -90,6 +91,6 @@
 
 
     <!-- Codigo JS-->
-</script>
+     <script src="../JavaScript/Home/Menus.js"></script>
 </body>
 </html>

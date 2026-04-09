@@ -38,6 +38,24 @@ body
     border-radius: 15px;
     gap: 2px !important;
 }
+
+/*Esconde os menus*/
+.hidden
+{
+    display: none !important;
+}
+
+/*Fecha os menus*/
+#CloseMenusDiv
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
 /***************************************************************/
 
 
@@ -66,7 +84,7 @@ body
 /*Menu Hamburguer*/
 .menuburguer
 {
-    transition: 0.4s;
+    transition: 0.2s;
    display: inline-block;
    transform: scale(2);
 }
@@ -75,7 +93,7 @@ body
     transition: 0.4s;
     cursor: pointer;
    display: inline-block;
-   transform: scale(2.5);
+   transform: scale(2.2);
 }
 
 /*Imagens de perfil*/
@@ -136,6 +154,46 @@ body
     transition: left 0.3s ease;
 }
 
+/*Animação drop down menu*/
+@keyframes descer 
+{
+    from 
+    {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subir
+{
+    from 
+    {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    to
+    {
+        opacity: 0;
+        transform: translateY(-10);
+    }
+}
+
+/*configuração da animação */
+.SideMenu.down
+{
+    animation: descer 0.5s ease forwards;
+}
+
+.SideMenu.up
+{
+    animation: subir 0.5s ease backwards;
+}
+
 /* ── Botões do Side Menu ── */
 .SideMenu a, .SideMenu .MenuBtn, .SideMenu .SairBtn{
     display: flex;
@@ -157,6 +215,15 @@ body
 .SideMenu a:hover, .SideMenu .MenuBtn:hover, .SideMenu .SairBtn:hover {
     background-color: #C8D3BA;
     transform: translateX(4px);
+}
+
+.SairBtn{
+    color: #c0392b !important;
+}
+
+.SairBtn:hover {
+    background: #fdecea !important;
+    color: #c0392b !important;
 }
 /******************************************************/
 
@@ -230,9 +297,9 @@ body
 .ActionBtn:hover
 {
     color: #EDEAE0;
-    transition: 0.2s;
+    transition: 0.3s;
     cursor: pointer;
-    scale: calc(1.10);
+    scale: calc(1.1);
     background-color:   #4A5131;
     border-color: #4A5131;
 }
@@ -281,13 +348,23 @@ body
     transform: translateX(4px);
 }
 
-.SairBtn{
-    color: #c0392b !important;
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px) translateY(-50%); }
+    to   { opacity: 1; transform: translateY(-50%); }
 }
 
-.SairBtn:hover {
-    background: #fdecea !important;
-    color: #c0392b !important;
+@keyframes fadeOut {
+    to   { opacity: 0; transform: translateY(10px) translateY(-50%); }
+    from { opacity: 1; transform: translateY(-50%); }
+}
+
+.FloatMenu.visible {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.FloatMenu.invisible {
+    animation: fadeOut 0.5s ease backwards;
 }
 /************************************************/
 
