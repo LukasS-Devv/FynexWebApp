@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fynex Criar Conta</title>
+    <link rel="shortcut icon" href="../Images/logo_fynex_no_bg _.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Css/criarConta.css">
+</head>
+
+<body>
+    <!-- Particulas-->
+    <div class="particula p1"></div>
+    <div class="particula p2"></div>
+    <div class="particula p3"></div>
+    <div class="particula p4"></div>
+
+    <!-- Mensagem-->
+    <div id="cadastro">
+        <h1><strong>Criar Conta</strong></h1>
+    </div>
+
+    <!-- Down Shape-->
+        <img id="stickerA" src="../Images/Shape Set_a.svg" alt="DownSticker">
+    <!-- Up Shape-->
+        <img id="stickerB" src="../Images/Shape Set_b.svg" alt="UpSticker">
+    <!-- Fynex-->
+        <img id="stickerC" src="../Images/logo_fynex_no_bg _.png" alt="FynexLogoSticker">
+
+    <!-- Inputs-->
+    <div id="Inputs">
+        <input  id="email"    class="input"  type="email"     placeholder="Email">
+        <input  id="password" class="input"  type="password"  placeholder="password">
+        <input  id="confirm"  class="input"  type="password"  placeholder="Confirmar password">
+
+        <br><button onclick="CriarConta()">Continuar</button>
+    </div>
+
+    <!--Link Politica-->
+    <div id="politica">
+        <h3>Ao prosseguir, você concorda com os nossos <u><a href="Politica.html">Termos de serviço e Política de Privacidade</a></u></h3>
+    </div>
+
+    <script type="module" src="../JavaScript/Contas/CriarConta.js"></script>
+</body>
+</html>
