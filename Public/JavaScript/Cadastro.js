@@ -1,14 +1,15 @@
-import { auth, db } from "./Firebase.js";
-import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
+import { auth, db }             from "./Firebase.js";
 import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+import { onAuthStateChanged }   from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
+
+
 
 // Proteção de página
 onAuthStateChanged(auth, async (user) =>
 {
-    if (!user)
+    if (!user) 
     {
-        // Não está autenticado → volta ao Index
+        // Não está autenticado? → volta ao Index!
         window.location.replace("../Html/Index.html");
         return;
     }
@@ -17,7 +18,7 @@ onAuthStateChanged(auth, async (user) =>
     const docRef  = doc(db, "utilizadores", user.uid);
     const docSnap = await getDoc(docRef);
 
-    if (docSnap.exists())
+    if (docSnap.exists() && !window.location.pathname.includes("BemVindo.html"))
     {
         // Já tem cadastro → vai direto para o Dashboard
         window.location.replace("../Html/BemVindo.html");
@@ -34,7 +35,7 @@ async function Entrar()
     const campos    = [nome, sobrenome, montante, moeda];
     var full        = true;
 
-    campos.forEach(campo =>
+    campos.forEach((campo)=>
     {
         if (campo.value.trim() === "" || campo.value === "N")
         {
@@ -44,32 +45,30 @@ async function Entrar()
         else
         {
             campo.classList.remove('input-erro');
-        }
+        } 
     });
 
     if (full === true)
     {
-        onAuthStateChanged(auth, async (user) =>
+        const user = auth.currentUser;
+        
+        if (user)
         {
-            if (user)
+            await setDoc(doc(db, "utilizadores", user.uid),
             {
-                await setDoc(doc(db, "utilizadores", user.uid),
-                {
-                    nome:       nome.value.trim(),
-                    sobrenome:  sobrenome.value.trim(),
-                    saldo:      parseFloat(montante.value),
-                    moeda:      moeda.value,
-                    criadoEm:   new Date()
-                });
-
-                window.location.replace("../Html/BemVindo.html");
-            }
-            else
-            {
-                window.location.replace("../Html/Index.html");
-            }
-        });
+                nome:       nome.value.trim(),
+                sobrenome:  sobrenome.value.trim(),
+                saldo:      parseFloat(montante.value.replace(',', '.')),
+                moeda:      moeda.value,
+                criadoEm:   new Date()
+            });
+            window.location.replace("../Html/BemVindo.html");
+        }
+        else
+        {
+            window.location.replace("../Html/Index.html");
+        }
     }
-}
+}   
 
 window.Entrar = Entrar;

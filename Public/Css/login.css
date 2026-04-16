@@ -1,5 +1,218 @@
-@import url('./cadastro.css');
+/*Definições do body*/
+body
+{
+    background-color: #D7CCC8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 
+::-webkit-scrollbar
+{
+    display: none;
+}
+/**************************************************/
+
+
+/*Botões*/
+button 
+{
+
+    background-color: #7D864F;
+    outline: none;
+    column-gap: 100px;
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+    color: black;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+}
+button:hover 
+{
+    background-color: #4A5131;
+    transform: scale(1.02);
+}
+/*************************************************************/
+
+
+/*Mensagem Topo*/
+#mensagem
+{
+    padding: auto;
+    text-align: center;
+    color: #2C3E50;
+    font-size: x-large;
+    position: relative
+}
+/******************************************************/
+
+
+/*Stickers*/
+/*Sticker Down*/
+#stickerA
+{
+    animation: move 6s ease-in-out infinite;
+
+    z-index: 1;
+    position:absolute;
+    left: -2%;
+    bottom: -12%;
+    width: 25%;
+}
+
+/*Sticker Up*/
+#stickerB
+{
+    animation: move 8s ease-in-out infinite;
+    animation-delay: 1s;
+
+    position:absolute;
+    right: -2%;
+    top: -2%;
+    width: 20%;
+}
+
+/*Fynex Logo*/
+#stickerC
+{
+    position:absolute;
+    transform: translate(-50%, -50%);
+    left: 15%;
+    top: 30%;
+    left: 50%;
+    width: 17%;
+    
+}
+/************************************************************/
+
+
+/*Cadastro Div*/
+#Inputs
+{
+    overflow-y: auto;
+    text-align: center;
+    font-size: large;
+    position: absolute;
+    left: 49.5%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 300px; 
+    max-height: 250px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); 
+    border: 1px solid rgba(0, 0, 0, 0.288);
+}
+/*****************************************************************/
+
+
+/*Espaços do formulario*/
+.input 
+{
+    padding: 12px;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    box-sizing: border-box;
+    transition: 0.4s;
+}
+
+.input:hover
+{
+    transition: 0.3s;
+    cursor: pointer ;
+    transform: scale(1.02);
+}
+/******************************************************/
+
+
+/*Links Politica*/
+#politica
+{
+    text-align: center;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top : 90%;
+    left: 50%;
+    
+}
+/***********************************************************/
+
+
+/*Animação Stickers*/
+@keyframes move
+{
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); } 
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+/****************************************************************/
+
+
+/*Animação das particulas*/
+/*configurações particulas*/
+.particula 
+{
+    position:fixed;
+    left: -10%;
+    width: 14px;
+    height: 4px;
+    background-color: #2D3A27; 
+    border-radius: 60% 20%;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+/*Animação*/
+@keyframes ventoLateral 
+{
+
+    0% 
+    {
+        transform: translate(-10vw, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20%     { opacity: 0.4; }
+    80%     { opacity: 0.4; }
+
+    100%    
+    {
+        transform: translate(110vw, 15vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.p1 { top: 10%; animation: ventoLateral 6s linear infinite; }
+.p2 { top: 40%; animation: ventoLateral 7s linear infinite; animation-delay: 2s; }
+.p3 { top: 70%; animation: ventoLateral 8s linear infinite; animation-delay: 3s; }
+.p4 { top: 85%; animation: ventoLateral 10s linear infinite; animation-delay: 1s; }
+/******************************************************************************************/
+
+
+/*Erros de falta de preenchimento*/
+/*Tornar vermelho depois de terminar sem entradas*/
+.input-erro {
+    border: 2px solid #ff4d4d !important;
+    animation: shake 0.4s ease-in-out;
+}
+
+/*Animação Falta de Entrada*/
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+/********************************************************/
 
 #Inputs {
     max-height: 200px; 

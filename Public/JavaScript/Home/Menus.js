@@ -1,6 +1,6 @@
 const DropDownMenu = document.getElementById("SideMenuId");
-const FloatMenu = document.getElementById("FloatMenuId");
-const Body = document.getElementById("CloseMenusDiv");
+const FloatMenu    = document.getElementById("FloatMenuId");
+const Body         = document.getElementById("CloseMenusDiv");
 
 
 let OpenDrop = false;

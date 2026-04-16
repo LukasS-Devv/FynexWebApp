@@ -11,7 +11,7 @@ async function CriarConta()
 
     // Validação campos vazios
     campos.forEach(campo =>
-    {
+    {   
         if (campo.value.trim() === "")
         {
             campo.classList.add('input-erro');
@@ -26,9 +26,9 @@ async function CriarConta()
     // Validação passwords iguais
     if (password.value !== confirm.value)
     {
+        alert("As palavras-passe não coincidem!");
         password.classList.add('input-erro');
         confirm.classList.add('input-erro');
-        alert("As palavras-passe não coincidem!");
         return;
     }
 
@@ -39,14 +39,20 @@ async function CriarConta()
             await createUserWithEmailAndPassword(auth, email.value, password.value);
             window.location.replace("../Html/Cadastro.html");
         }
+
         catch (erro)
         {
             if (erro.code === "auth/email-already-in-use")
-                alert("Este email já está em uso!");
+            {
+                alert("Uma conta com esta email já existe, redirecionando para a pagina de Login");
+                window.location.replace("../Html/Login.html");
+            }
             else if (erro.code === "auth/weak-password")
                 alert("A palavra-passe deve ter pelo menos 6 caracteres!");
+
             else if (erro.code === "auth/invalid-email")
                 alert("Email inválido!");
+            
             else
                 alert("Erro: " + erro.message);
         }

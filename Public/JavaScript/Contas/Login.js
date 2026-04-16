@@ -29,6 +29,7 @@ async function Login()
             await signInWithEmailAndPassword(auth, email.value, password.value);
             window.location.replace("../Html/BemVindo.html");
         }
+        
         catch (erro)
         {
             if (erro.code === "auth/user-not-found" || erro.code === "auth/wrong-password")
